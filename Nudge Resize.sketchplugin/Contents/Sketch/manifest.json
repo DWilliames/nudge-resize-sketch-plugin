@@ -1,0 +1,97 @@
+{
+  "name": "Nudge Resize!",
+  "description": "Plugins to quickly resize a layer vertically and horizontally with keyboard shortcuts",
+  "author": "David Williames",
+  "homepage": "https://github.com/DWilliames/quick-resize",
+  "version": 1.0,
+  "identifier": "com.davidwilliames.nudge-resize-sketch-plugin",
+  "compatibleVersion": 37,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Expand vertically",
+      "identifier": "increaseVertically",
+      "shortcut": "alt ↓",
+      "script": "main.js",
+      "handler": "increaseVertically",
+      "icon": "icons\/increaseVertically.png",
+      "description": "Expand current layer vertically from centre."
+    },
+    {
+      "name": "Expand vertically (large nudge)",
+      "identifier": "increaseVerticallyLarge",
+      "shortcut": "alt shift ↓",
+      "script": "main.js",
+      "handler": "increaseVerticallyLarge",
+      "icon": "icons\/increaseVerticallyLarge.png",
+      "description": "Expand current layer vertically from centre – by a large amount."
+    },
+    {
+      "name": "Compress vertically",
+      "identifier": "decreaseVertically",
+      "shortcut": "alt ↑",
+      "script": "main.js",
+      "handler": "decreaseVertically",
+      "icon": "icons\/decreaseVertically.png",
+      "description": "Compress current layer vertically from centre."
+    },
+    {
+      "name": "Compress vertically (large nudge)",
+      "identifier": "decreaseVerticallyLarge",
+      "shortcut": "alt shift ↑",
+      "script": "main.js",
+      "handler": "decreaseVerticallyLarge",
+      "icon": "icons\/decreaseVerticallyLarge.png",
+      "description": "Compress current layer vertically from centre – by a large amount."
+    },
+    {
+      "name": "Expand horizontally",
+      "identifier": "increaseHorizontally",
+      "shortcut": "alt →",
+      "script": "main.js",
+      "handler": "increaseHorizontally",
+      "icon": "icons\/increaseHorizontally.png",
+      "description": "Expand current layer horizontally from centre."
+    },
+    {
+      "name": "Expand horizontally (large nudge)",
+      "identifier": "increaseHorizontallyLarge",
+      "shortcut": "alt shift →",
+      "script": "main.js",
+      "handler": "increaseHorizontallyLarge",
+      "icon": "icons\/increaseHorizontallyLarge.png",
+      "description": "Expand current layer horizontally from centre – by a large amount."
+    },
+    {
+      "name": "Compress horizontally",
+      "identifier": "decreaseHorizontally",
+      "shortcut": "alt ←",
+      "script": "main.js",
+      "handler": "decreaseHorizontally",
+      "icon": "icons\/decreaseHorizontally.png",
+      "description": "Compress current layer horizontally from centre."
+    },
+    {
+      "name": "Compress horizontally (large nudge)",
+      "identifier": "decreaseHorizontallyLarge",
+      "shortcut": "alt shift ←",
+      "script": "main.js",
+      "handler": "decreaseHorizontallyLarge",
+      "icon": "icons\/decreaseHorizontallyLarge.png",
+      "description": "Compress current layer horizontally from centre – by a large amount."
+    }
+  ],
+  "menu": {
+    "items": [
+      "increaseVertically",
+      "increaseHorizontally",
+      "decreaseVertically",
+      "decreaseHorizontally",
+      "-",
+      "increaseVerticallyLarge",
+      "increaseHorizontallyLarge",
+      "decreaseVerticallyLarge",
+      "decreaseHorizontallyLarge"
+    ]
+  }
+}
