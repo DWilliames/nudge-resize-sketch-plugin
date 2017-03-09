@@ -49,7 +49,7 @@ Currently, you can resize a layer by using 'cmd + arrow' or 'cmd + shift + arrow
 
 ## Installation
 
-1. Download the plugin
+1. [Download](https://github.com/DWilliames/nudge-resize-sketch-plugin/releases/download/v1.0/Nudge.Resize.sketchplugin.zip) the plugin
 2. Double-click the file, 'Nudge Resize.sketchplugin'
 3. That's it...
 
