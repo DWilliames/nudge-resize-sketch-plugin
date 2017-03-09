@@ -2,10 +2,10 @@
   "name": "Nudge Resize!",
   "description": "Plugins to quickly resize a layer vertically and horizontally with keyboard shortcuts",
   "author": "David Williames",
-  "homepage": "https://github.com/DWilliames/quick-resize",
+  "homepage": "https://github.com/DWilliames/nudge-resize-sketch-plugin",
   "version": 1.0,
   "identifier": "com.davidwilliames.nudge-resize-sketch-plugin",
-  "compatibleVersion": 37,
+  "compatibleVersion": 39,
   "bundleVersion": 1,
   "commands": [
     {
