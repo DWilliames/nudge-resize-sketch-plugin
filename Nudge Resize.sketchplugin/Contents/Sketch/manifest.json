@@ -5,6 +5,7 @@
   "homepage": "https://github.com/DWilliames/nudge-resize-sketch-plugin",
   "version": 1.0,
   "identifier": "com.davidwilliames.nudge-resize-sketch-plugin",
+  "appcast": "https://api.sketchpacks.com/v1/plugins/com.davidwilliames.nudge-resize-sketch-plugin/appcast",
   "compatibleVersion": 39,
   "bundleVersion": 1,
   "commands": [
