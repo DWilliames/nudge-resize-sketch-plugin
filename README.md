@@ -1,4 +1,5 @@
 # Nudge Resize Sketch Plugin
+[![Download from Sketchpacks.com](https://badges.sketchpacks.com/plugins/com.davidwilliames.nudge-resize-sketch-plugin/version.svg)](https://api.sketchpacks.com/v1/plugins/com.davidwilliames.nudge-resize-sketch-plugin/download) [![Compatible Sketch Version](https://badges.sketchpacks.com/plugins/com.davidwilliames.nudge-resize-sketch-plugin/compatibility.svg)](https://sketchpacks.com/DWilliames/nudge-resize-sketch-plugin)
 
 <a href="https://www.sketchapp.com">
   <img width="160" height="41" src="images/sketch-badge.png" >
