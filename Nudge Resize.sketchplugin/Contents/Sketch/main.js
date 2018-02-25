@@ -1,16 +1,21 @@
 var selection
 var doc
-var smallNudge // Based on the user's settings — typical 'move' amount (1)
-var largeNudge // Based on the user's settings — typical 'shift + move' amount (10)
+
+// Get the values from the 'User Defaults'
+// Visible at '~/Library/Preferences/com.bohemiancoding.sketch3.plist'
+
+// Based on the user's settings — typical 'move' amount (1)
+var smallNudge = NSUserDefaults.standardUserDefaults().integerForKey('nudgeDistanceSmall')
+// Based on the user's settings — typical 'shift + move' amount (10)
+var largeNudge = NSUserDefaults.standardUserDefaults().integerForKey('nudgeDistanceBig')
+
+// Used for determining whether to round to 'whole pixels'
+var pixelFit = NSUserDefaults.standardUserDefaults().boolForKey('tryToFitToPixelBounds')
 
 // Setup variables based on the context
 function setup(context) {
   doc = context.document
   selection = context.selection
-  // Get the values from the 'User Defaults'
-  // Visible at '~/Library/Preferences/com.bohemiancoding.sketch3.plist'
-  smallNudge = NSUserDefaults.standardUserDefaults().integerForKey('nudgeDistanceSmall')
-  largeNudge = NSUserDefaults.standardUserDefaults().integerForKey('nudgeDistanceBig')
 }
 
 
@@ -66,15 +71,25 @@ function decreaseHorizontallyLarge(context) {
  * 'y' is the change in height
  */
 function changeSize(x, y) {
-  selection.forEach(layer => {
-    // Unlock the constraints, if locked
-    layer.setConstrainProportions(false)
+  selection.forEach(function(layer) {
     // Update the frame values
     var frame = layer.frame()
-    frame.setX(frame.x() - x)
-    frame.setY(frame.y() - y)
-    frame.setWidth(frame.width() + 2 * x)
-    frame.setHeight(frame.height() + 2 * y)
+    var newX = frame.x() - x
+    var newY = frame.y() - y
+    var width = frame.width() + 2 * x
+    var height = frame.height() + 2 * y
+
+    if (pixelFit) {
+      newX = Math.round(newX)
+      newY = Math.round(newY)
+      width = Math.round(width)
+      height = Math.round(height)
+    }
+
+    layer.frame().setRectByIgnoringProportions(NSMakeRect(newX, newY, width, height))
+
+    // Update the parent's frame, just in case it changed
+    if (layer.parentGroup()) layer.parentGroup().layerDidEndResize()
   })
 
   // Update the inspector, so the position and size textfields are up to date

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>"Nudge Resize</title>
+    <link>https://raw.githubusercontent.com/DWilliames/nudge-resize-sketch-plugin/master/.appcast.xml</link>
+    <description>Quickly resize a layer vertically and horizontally with keyboard shortcuts</description>
+    <language>en</language>
+    <item>
+      <title>Version 1.1</title>
+      <description>More bug fixes</description>
+      <enclosure url="https://github.com/DWilliames/nudge-resize-sketch-plugin/releases/download/v1.1/Nude.Resize.sketchplugin.zip" sparkle:version="1.1" />
+    </item>
+  </channel>
+</rss>
